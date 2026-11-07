@@ -29,7 +29,11 @@ static NSString * const kMPMathJaxCDN =
 static NSString * const kMPPrismScriptDirectory = @"Prism/components";
 static NSString * const kMPPrismThemeDirectory = @"Prism/themes";
 static NSString * const kMPPrismPluginDirectory = @"Prism/plugins";
-static size_t kMPRendererNestingLevel = SIZE_MAX;
+// F-02 (audit v1): Hoedown recursion bound. Was SIZE_MAX (unbounded) —
+// deeply nested blockquotes/lists in a crafted document could exhaust the
+// stack on open. 16 restores the bound prescribed in audit v1 F-02
+// (upstream Hoedown default class), passed to hoedown_document_new below.
+static size_t kMPRendererNestingLevel = 16;
 static int kMPRendererTOCLevel = 6;  // h1 to h6.
 
 
