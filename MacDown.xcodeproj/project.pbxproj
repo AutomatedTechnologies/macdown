@@ -140,6 +140,8 @@
 		D30000000000000000000101 /* HBHelperRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000100 /* HBHelperRegistry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D30000000000000000000103 /* HBHelperUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000102 /* HBHelperUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D30000000000000000000105 /* HBParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000104 /* HBParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000217 /* handlebars-objc.ym in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000216 /* handlebars-objc.ym */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000219 /* handlebars-objc.lm in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000218 /* handlebars-objc.lm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D30000000000000000000107 /* HBPartial.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000106 /* HBPartial.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D30000000000000000000109 /* HBPartialRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000108 /* HBPartialRegistry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D30000000000000000000111 /* HBEscapingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000110 /* HBEscapingFunctions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -642,6 +644,8 @@
 		D30000000000000000000100 /* HBHelperRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBHelperRegistry.m; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBHelperRegistry.m"; sourceTree = SOURCE_ROOT; };
 		D30000000000000000000102 /* HBHelperUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBHelperUtils.m; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBHelperUtils.m"; sourceTree = SOURCE_ROOT; };
 		D30000000000000000000104 /* HBParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBParser.m; path = "Dependency/handlebars-objc/src/handlebars-objc/parser/HBParser.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000216 /* handlebars-objc.ym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; name = "handlebars-objc.ym"; path = "Dependency/handlebars-objc/src/handlebars-objc/parser/handlebars-objc.ym"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000218 /* handlebars-objc.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; name = "handlebars-objc.lm"; path = "Dependency/handlebars-objc/src/handlebars-objc/parser/handlebars-objc.lm"; sourceTree = SOURCE_ROOT; };
 		D30000000000000000000106 /* HBPartial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBPartial.m; path = "Dependency/handlebars-objc/src/handlebars-objc/partials/HBPartial.m"; sourceTree = SOURCE_ROOT; };
 		D30000000000000000000108 /* HBPartialRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBPartialRegistry.m; path = "Dependency/handlebars-objc/src/handlebars-objc/partials/HBPartialRegistry.m"; sourceTree = SOURCE_ROOT; };
 		D30000000000000000000110 /* HBEscapingFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBEscapingFunctions.m; path = "Dependency/handlebars-objc/src/handlebars-objc/runtime/HBEscapingFunctions.m"; sourceTree = SOURCE_ROOT; };
@@ -1610,6 +1614,8 @@
 				D30000000000000000000101 /* HBHelperRegistry.m in Sources */,
 				D30000000000000000000103 /* HBHelperUtils.m in Sources */,
 				D30000000000000000000105 /* HBParser.m in Sources */,
+				D30000000000000000000217 /* handlebars-objc.ym in Sources */,
+				D30000000000000000000219 /* handlebars-objc.lm in Sources */,
 				D30000000000000000000107 /* HBPartial.m in Sources */,
 				D30000000000000000000109 /* HBPartialRegistry.m in Sources */,
 				D30000000000000000000111 /* HBEscapingFunctions.m in Sources */,
