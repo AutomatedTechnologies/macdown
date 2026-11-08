@@ -27,10 +27,17 @@ jobs:
         run: |
           xcodebuild -workspace MacDown.xcworkspace -list
 
-      - name: Generate peg-markdown-highlight parser (pmh_parser.c)
+      - name: Generate generated parser sources (pmh_parser.c, handlebars tab/yy)
         run: |
           make -C Dependency/peg-markdown-highlight
           test -s Dependency/peg-markdown-highlight/pmh_parser.c
+          cd Dependency/handlebars-objc/src/handlebars-objc/parser
+          bison -d -b y handlebars-objc.ym
+          mv y.tab.c handlebars-objc.tab.m
+          flex -o handlebars-objc.yy.m handlebars-objc.lm
+          test -s handlebars-objc.tab.m
+          test -s handlebars-objc.yy.m
+          test -s y.tab.h
 
       - name: Build MacDown (Release, unsigned, 10.13 floor)
         run: |
