@@ -27,6 +27,11 @@ jobs:
         run: |
           xcodebuild -workspace MacDown.xcworkspace -list
 
+      - name: Generate peg-markdown-highlight parser (pmh_parser.c)
+        run: |
+          make -C Dependency/peg-markdown-highlight
+          test -s Dependency/peg-markdown-highlight/pmh_parser.c
+
       - name: Build MacDown (Release, unsigned, 10.13 floor)
         run: |
           set -o pipefail
