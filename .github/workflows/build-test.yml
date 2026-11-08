@@ -34,10 +34,10 @@ jobs:
           cd Dependency/handlebars-objc/src/handlebars-objc/parser
           bison -d -b y handlebars-objc.ym
           ls -la
-          TAB_C=$(ls *.tab.c | head -n 1)
+          TAB_C=$(ls *.tab.c* | head -n 1)
           test -n "$TAB_C"
           mv "$TAB_C" handlebars-objc.tab.m
-          if [ ! -s y.tab.h ]; then TAB_H=$(ls *.tab.h | head -n 1); test -n "$TAB_H"; cp "$TAB_H" y.tab.h; fi
+          if [ ! -s y.tab.h ]; then TAB_H=$(ls *.tab.h* | head -n 1); test -n "$TAB_H"; cp "$TAB_H" y.tab.h; fi
           flex -o handlebars-objc.yy.m handlebars-objc.lm
           test -s handlebars-objc.tab.m
           test -s handlebars-objc.yy.m
