@@ -1,0 +1,75 @@
+name: MacDown V-4 build proof
+
+on:
+  push:
+    branches: [build-test-macdown]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - name: Checkout (with submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Report Xcode and SDK
+        run: |
+          xcodebuild -version
+          xcrun --show-sdk-path
+          xcodebuild -showsdks
+
+      - name: List schemes (sanity)
+        run: |
+          xcodebuild -workspace MacDown.xcworkspace -list
+
+      - name: Build MacDown (Release, unsigned, 10.13 floor)
+        run: |
+          set -o pipefail
+          xcodebuild -workspace MacDown.xcworkspace -scheme MacDown \
+            -configuration Release \
+            -derivedDataPath ./DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            MACOSX_DEPLOYMENT_TARGET=10.13 \
+            build 2>&1 | tee xcodebuild.log
+
+      - name: Upload full xcodebuild log (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcodebuild-log
+          path: xcodebuild.log
+          if-no-files-found: warn
+
+      - name: Package app as zip
+        if: success()
+        run: |
+          APP=$(find ./DerivedData -name 'MacDown.app' -path '*Release*' | grep -v '\.dSYM' | head -1)
+          echo "Built app: $APP"
+          test -n "$APP"
+          test -x "$APP/Contents/MacOS/MacDown"
+          file "$APP/Contents/MacOS/MacDown"
+          ditto -c -k --keepParent "$APP" MacDown-test.zip
+          ls -la MacDown-test.zip
+          shasum -a 256 MacDown-test.zip
+
+      - name: Upload test build zip (survival copy)
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: macdown-test-zip
+          path: MacDown-test.zip
+
+      - name: Publish prerelease with test build
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create macdown-test-${{ github.run_number }} MacDown-test.zip \
+            --prerelease \
+            --title "MacDown — first Academy release candidate (test build ${{ github.run_number }})" \
+            --notes "First Academy release-candidate build of MacDown (CI build proof, V-4). Ships the Academy bundle ID com.detroitautomationacademy.macdown and the Academy audit entry in the app Info.plist. Lineage: F-02 Hoedown nesting-bound fix + U1 updater repoint + F-05 V-1..V-3 vendoring (CocoaPods removed). NOT rig-verified on High Sierra. Findings F-01/F-02/F-03/F-05/F-06 remain OPEN — this build closes nothing. NOT A RELEASE."
