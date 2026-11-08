@@ -83,13 +83,79 @@
 		1FFEB32B19737D6E00B2254F /* YAMLSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFEB32A19737D6E00B2254F /* YAMLSerialization.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -Wno-unused-variable"; }; };
 		1FFF301D1948A5320009AF24 /* MPStringLookupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFF301C1948A5320009AF24 /* MPStringLookupTests.m */; };
 		3028039E1FD84EAC0055B0DA /* contribute.md in Resources */ = {isa = PBXBuildFile; fileRef = 3028039D1FD84EAB0055B0DA /* contribute.md */; };
-		770BB49E962A302D0715A6A5 /* libPods-MacDown.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F926DD38559C7CEDB6E42F /* libPods-MacDown.a */; };
 		852D523C1E260A6400BA7162 /* MPTerminalPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852D523A1E260A6400BA7162 /* MPTerminalPreferencesViewController.m */; };
 		85E24E5C1E5019C00056E696 /* MPToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E24E5B1E5019C00056E696 /* MPToolbarController.m */; };
 		905EF1A9196164CA00FC3CE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905EF1A8196164CA00FC3CE9 /* Foundation.framework */; };
 		905EF1B7196164F300FC3CE9 /* macdown in Copy Command Line Utility */ = {isa = PBXBuildFile; fileRef = 905EF1A7196164CA00FC3CE9 /* macdown */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B5C5C1666A506FEA86435D25 /* libPods-macdown-cmd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 263367245B2D78A42C2F19D7 /* libPods-macdown-cmd.a */; };
-		EBFE3157737058F5A63699C8 /* libPods-MacDownTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C949FDE45493AE77DAD9BF4 /* libPods-MacDownTests.a */; };
+		D30000000000000000000002 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30000000000000000000001 /* Sparkle.framework */; };
+		D30000000000000000000003 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D30000000000000000000001 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D30000000000000000000005 /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000004 /* MASPreferencesWindow.xib */; };
+		D30000000000000000000007 /* autolink.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000006 /* autolink.c */; };
+		D30000000000000000000009 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000008 /* buffer.c */; };
+		D30000000000000000000011 /* document.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000010 /* document.c */; };
+		D30000000000000000000013 /* escape.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000012 /* escape.c */; };
+		D30000000000000000000015 /* html.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000014 /* html.c */; };
+		D30000000000000000000017 /* html_blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000016 /* html_blocks.c */; };
+		D30000000000000000000019 /* html_smartypants.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000018 /* html_smartypants.c */; };
+		D30000000000000000000021 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000020 /* stack.c */; };
+		D30000000000000000000023 /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000022 /* version.c */; };
+		D30000000000000000000025 /* api.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000024 /* api.c */; };
+		D30000000000000000000027 /* dumper.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000026 /* dumper.c */; };
+		D30000000000000000000029 /* emitter.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000028 /* emitter.c */; };
+		D30000000000000000000031 /* loader.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000030 /* loader.c */; };
+		D30000000000000000000033 /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000032 /* parser.c */; };
+		D30000000000000000000035 /* reader.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000034 /* reader.c */; };
+		D30000000000000000000037 /* scanner.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000036 /* scanner.c */; };
+		D30000000000000000000039 /* writer.c in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000038 /* writer.c */; };
+		D30000000000000000000041 /* HBHandlebars.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000040 /* HBHandlebars.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000043 /* HBAstBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000042 /* HBAstBlock.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000045 /* HBAstComment.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000044 /* HBAstComment.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000047 /* HBAstNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000046 /* HBAstNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000049 /* HBAstPartialTag.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000048 /* HBAstPartialTag.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000051 /* HBAstProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000050 /* HBAstProgram.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000053 /* HBAstRawText.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000052 /* HBAstRawText.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000055 /* HBAstSimpleTag.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000054 /* HBAstSimpleTag.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000057 /* HBAstTag.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000056 /* HBAstTag.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000059 /* HBAstContextualValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000058 /* HBAstContextualValue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000061 /* HBAstExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000060 /* HBAstExpression.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000063 /* HBAstKeyPathComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000062 /* HBAstKeyPathComponent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000065 /* HBAstNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000064 /* HBAstNumber.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000067 /* HBAstParametersHash.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000066 /* HBAstParametersHash.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000069 /* HBAstString.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000068 /* HBAstString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000071 /* HBAstValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000070 /* HBAstValue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000073 /* HBAstEvaluationVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000072 /* HBAstEvaluationVisitor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000075 /* HBAstParserPostprocessingVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000074 /* HBAstParserPostprocessingVisitor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000077 /* HBAstParserTestVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000076 /* HBAstParserTestVisitor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000079 /* HBAstVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000078 /* HBAstVisitor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000081 /* HBContextRendering.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000080 /* HBContextRendering.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000083 /* HBContextStack.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000082 /* HBContextStack.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000085 /* HBContextState.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000084 /* HBContextState.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000087 /* HBDataContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000086 /* HBDataContext.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000089 /* HBObjectPropertyAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000088 /* HBObjectPropertyAccess.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000091 /* HBErrorHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000090 /* HBErrorHandling.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000093 /* HBBuiltinHelpersRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000092 /* HBBuiltinHelpersRegistry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000095 /* HBEscapedString.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000094 /* HBEscapedString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000097 /* HBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000096 /* HBHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000099 /* HBHelperCallingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000098 /* HBHelperCallingInfo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000101 /* HBHelperRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000100 /* HBHelperRegistry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000103 /* HBHelperUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000102 /* HBHelperUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000105 /* HBParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000104 /* HBParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000107 /* HBPartial.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000106 /* HBPartial.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000109 /* HBPartialRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000108 /* HBPartialRegistry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000111 /* HBEscapingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000110 /* HBEscapingFunctions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000113 /* HBExecutionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000112 /* HBExecutionContext.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000115 /* HBTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000114 /* HBTemplate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D30000000000000000000117 /* JJPluralForm.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000116 /* JJPluralForm.m */; };
+		D30000000000000000000119 /* M13OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000118 /* M13OrderedDictionary.m */; };
+		D30000000000000000000121 /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000120 /* MASPreferencesWindowController.m */; };
+		D30000000000000000000123 /* PAPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000122 /* PAPreferences.m */; };
+		D30000000000000000000125 /* PAPropertyDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000124 /* PAPropertyDescriptor.m */; };
+		D30000000000000000000126 /* PAPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000122 /* PAPreferences.m */; };
+		D30000000000000000000127 /* PAPropertyDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000124 /* PAPropertyDescriptor.m */; };
+		D30000000000000000000129 /* GBCommandLineParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000128 /* GBCommandLineParser.m */; };
+		D30000000000000000000131 /* GBOptionsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000130 /* GBOptionsHelper.m */; };
+		D30000000000000000000133 /* GBPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000132 /* GBPrint.m */; };
+		D30000000000000000000135 /* GBSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = D30000000000000000000134 /* GBSettings.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,11 +211,20 @@
 			name = "Copy Command Line Utility";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D30000000000000000000215 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D30000000000000000000003 /* Sparkle.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0D0EC0DE9FEA22F962083921 /* Pods-MacDownTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacDownTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacDownTests/Pods-MacDownTests.release.xcconfig"; sourceTree = "<group>"; };
-		1A198D1BA59D710201DD3BC8 /* Pods-MacDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacDown.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacDown/Pods-MacDown.debug.xcconfig"; sourceTree = "<group>"; };
 		1F002A21195B3DAE008B8D93 /* MPRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPRenderer.h; sourceTree = "<group>"; };
 		1F002A22195B3DAE008B8D93 /* MPRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPRenderer.m; sourceTree = "<group>"; };
 		1F05E8AB1F36E53B00E4D06C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Localization/fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
@@ -268,7 +343,6 @@
 		1F3FC8A91C85AE9F000965E1 /* MacDown.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = MacDown.sdef; path = Resources/MacDown.sdef; sourceTree = "<group>"; };
 		1F41FF7A1C8EEE9200FD9886 /* Templates */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Templates; path = Resources/Templates; sourceTree = "<group>"; };
 		1F4C8E99194AE0B9004BF82E /* MarkdownDocument.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = MarkdownDocument.icns; path = Resources/MarkdownDocument.icns; sourceTree = "<group>"; };
-		1F51C9A1194564670015A96F /* libPods-MacDown-PAPreferences.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MacDown-PAPreferences.a"; path = "../../../../Library/Developer/Xcode/DerivedData/MacDown-ggdtxvuybojeqbhjydkhilziizrv/Build/Products/Debug/libPods-MacDown-PAPreferences.a"; sourceTree = "<group>"; };
 		1F56013E2099A1E60035F207 /* de-DE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "de-DE"; path = "Localization/de-DE.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1F56013F2099A1E60035F207 /* de-DE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "de-DE"; path = "Localization/de-DE.lproj/MPExportPanelAccessoryViewController.strings"; sourceTree = "<group>"; };
 		1F5601402099A1E60035F207 /* de-DE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "de-DE"; path = "Localization/de-DE.lproj/MainMenu.strings"; sourceTree = "<group>"; };
@@ -483,19 +557,12 @@
 		1FFEB32919737D6E00B2254F /* YAMLSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAMLSerialization.h; sourceTree = "<group>"; };
 		1FFEB32A19737D6E00B2254F /* YAMLSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAMLSerialization.m; sourceTree = "<group>"; };
 		1FFF301C1948A5320009AF24 /* MPStringLookupTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPStringLookupTests.m; sourceTree = "<group>"; };
-		263367245B2D78A42C2F19D7 /* libPods-macdown-cmd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-macdown-cmd.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3028039D1FD84EAB0055B0DA /* contribute.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = contribute.md; path = Resources/contribute.md; sourceTree = "<group>"; };
-		39EFCAE04F60154F0C8C5469 /* Pods-MacDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacDown.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacDown/Pods-MacDown.release.xcconfig"; sourceTree = "<group>"; };
-		3C949FDE45493AE77DAD9BF4 /* libPods-MacDownTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MacDownTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D175F0F1974282400A5EFE8 /* WebView+WebViewPrivateHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebView+WebViewPrivateHeaders.h"; sourceTree = "<group>"; };
-		42F926DD38559C7CEDB6E42F /* libPods-MacDown.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MacDown.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DBAA63927A60EB2150642B3 /* Pods-macdown-cmd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macdown-cmd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-macdown-cmd/Pods-macdown-cmd.debug.xcconfig"; sourceTree = "<group>"; };
-		7A8EA75FA95818275755F0B6 /* Pods-macdown-cmd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macdown-cmd.release.xcconfig"; path = "Pods/Target Support Files/Pods-macdown-cmd/Pods-macdown-cmd.release.xcconfig"; sourceTree = "<group>"; };
 		852D52391E260A6400BA7162 /* MPTerminalPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTerminalPreferencesViewController.h; sourceTree = "<group>"; };
 		852D523A1E260A6400BA7162 /* MPTerminalPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTerminalPreferencesViewController.m; sourceTree = "<group>"; };
 		85E24E5A1E5019C00056E696 /* MPToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPToolbarController.h; path = Code/Application/MPToolbarController.h; sourceTree = "<group>"; };
 		85E24E5B1E5019C00056E696 /* MPToolbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPToolbarController.m; path = Code/Application/MPToolbarController.m; sourceTree = "<group>"; };
-		8CDC5EA0050D2F722FB1AADD /* Pods-MacDownTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacDownTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacDownTests/Pods-MacDownTests.debug.xcconfig"; sourceTree = "<group>"; };
 		905EF1A7196164CA00FC3CE9 /* macdown */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = macdown; sourceTree = BUILT_PRODUCTS_DIR; };
 		905EF1A8196164CA00FC3CE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E70ECDD4241C933C00537A46 /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "Localization/ru-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -523,6 +590,141 @@
 		E77E5D72241C935100699B5A /* da-DK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "da-DK"; path = "Localization/da-DK.lproj/MPDocument.strings"; sourceTree = "<group>"; };
 		E7D458CB241C933800411A36 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = Localization/fi.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		E7DD09F1241C9368008FBC25 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = Localization/da.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		D30000000000000000000001 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "Dependency/Sparkle/Sparkle.framework"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000004 /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MASPreferencesWindow.xib; path = "Dependency/MASPreferences/Framework/en.lproj/MASPreferencesWindow.xib"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000006 /* autolink.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = autolink.c; path = "Dependency/hoedown/autolink.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000008 /* buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = buffer.c; path = "Dependency/hoedown/buffer.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000010 /* document.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = document.c; path = "Dependency/hoedown/document.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000012 /* escape.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = escape.c; path = "Dependency/hoedown/escape.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000014 /* html.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = html.c; path = "Dependency/hoedown/html.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000016 /* html_blocks.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = html_blocks.c; path = "Dependency/hoedown/html_blocks.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000018 /* html_smartypants.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = html_smartypants.c; path = "Dependency/hoedown/html_smartypants.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000020 /* stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stack.c; path = "Dependency/hoedown/stack.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000022 /* version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = version.c; path = "Dependency/hoedown/version.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000024 /* api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = api.c; path = "Dependency/LibYAML/src/api.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000026 /* dumper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dumper.c; path = "Dependency/LibYAML/src/dumper.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000028 /* emitter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = emitter.c; path = "Dependency/LibYAML/src/emitter.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000030 /* loader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = loader.c; path = "Dependency/LibYAML/src/loader.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000032 /* parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = parser.c; path = "Dependency/LibYAML/src/parser.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000034 /* reader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = reader.c; path = "Dependency/LibYAML/src/reader.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000036 /* scanner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scanner.c; path = "Dependency/LibYAML/src/scanner.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000038 /* writer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = writer.c; path = "Dependency/LibYAML/src/writer.c"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000040 /* HBHandlebars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBHandlebars.m; path = "Dependency/handlebars-objc/src/handlebars-objc/HBHandlebars.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000042 /* HBAstBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstBlock.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstBlock.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000044 /* HBAstComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstComment.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstComment.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000046 /* HBAstNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstNode.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstNode.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000048 /* HBAstPartialTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstPartialTag.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstPartialTag.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000050 /* HBAstProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstProgram.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstProgram.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000052 /* HBAstRawText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstRawText.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstRawText.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000054 /* HBAstSimpleTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstSimpleTag.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstSimpleTag.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000056 /* HBAstTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstTag.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstTag.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000058 /* HBAstContextualValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstContextualValue.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstContextualValue.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000060 /* HBAstExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstExpression.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstExpression.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000062 /* HBAstKeyPathComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstKeyPathComponent.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstKeyPathComponent.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000064 /* HBAstNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstNumber.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstNumber.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000066 /* HBAstParametersHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstParametersHash.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstParametersHash.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000068 /* HBAstString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstString.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstString.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000070 /* HBAstValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstValue.m; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstValue.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000072 /* HBAstEvaluationVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstEvaluationVisitor.m; path = "Dependency/handlebars-objc/src/handlebars-objc/astVisitors/HBAstEvaluationVisitor.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000074 /* HBAstParserPostprocessingVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstParserPostprocessingVisitor.m; path = "Dependency/handlebars-objc/src/handlebars-objc/astVisitors/HBAstParserPostprocessingVisitor.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000076 /* HBAstParserTestVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstParserTestVisitor.m; path = "Dependency/handlebars-objc/src/handlebars-objc/astVisitors/HBAstParserTestVisitor.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000078 /* HBAstVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBAstVisitor.m; path = "Dependency/handlebars-objc/src/handlebars-objc/astVisitors/HBAstVisitor.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000080 /* HBContextRendering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBContextRendering.m; path = "Dependency/handlebars-objc/src/handlebars-objc/context/HBContextRendering.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000082 /* HBContextStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBContextStack.m; path = "Dependency/handlebars-objc/src/handlebars-objc/context/HBContextStack.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000084 /* HBContextState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBContextState.m; path = "Dependency/handlebars-objc/src/handlebars-objc/context/HBContextState.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000086 /* HBDataContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBDataContext.m; path = "Dependency/handlebars-objc/src/handlebars-objc/context/HBDataContext.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000088 /* HBObjectPropertyAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBObjectPropertyAccess.m; path = "Dependency/handlebars-objc/src/handlebars-objc/context/HBObjectPropertyAccess.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000090 /* HBErrorHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBErrorHandling.m; path = "Dependency/handlebars-objc/src/handlebars-objc/errorHandling/HBErrorHandling.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000092 /* HBBuiltinHelpersRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBBuiltinHelpersRegistry.m; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBBuiltinHelpersRegistry.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000094 /* HBEscapedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBEscapedString.m; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBEscapedString.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000096 /* HBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBHelper.m; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBHelper.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000098 /* HBHelperCallingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBHelperCallingInfo.m; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBHelperCallingInfo.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000100 /* HBHelperRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBHelperRegistry.m; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBHelperRegistry.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000102 /* HBHelperUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBHelperUtils.m; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBHelperUtils.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000104 /* HBParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBParser.m; path = "Dependency/handlebars-objc/src/handlebars-objc/parser/HBParser.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000106 /* HBPartial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBPartial.m; path = "Dependency/handlebars-objc/src/handlebars-objc/partials/HBPartial.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000108 /* HBPartialRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBPartialRegistry.m; path = "Dependency/handlebars-objc/src/handlebars-objc/partials/HBPartialRegistry.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000110 /* HBEscapingFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBEscapingFunctions.m; path = "Dependency/handlebars-objc/src/handlebars-objc/runtime/HBEscapingFunctions.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000112 /* HBExecutionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBExecutionContext.m; path = "Dependency/handlebars-objc/src/handlebars-objc/runtime/HBExecutionContext.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000114 /* HBTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBTemplate.m; path = "Dependency/handlebars-objc/src/handlebars-objc/runtime/HBTemplate.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000116 /* JJPluralForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJPluralForm.m; path = "Dependency/JJPluralForm/JJPluralForm/JJPluralForm.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000118 /* M13OrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13OrderedDictionary.m; path = "Dependency/M13OrderedDictionary/M13OrderedDictionary.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000120 /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MASPreferencesWindowController.m; path = "Dependency/MASPreferences/Framework/MASPreferencesWindowController.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000122 /* PAPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PAPreferences.m; path = "Dependency/PAPreferences/PAPreferences/PAPreferences.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000124 /* PAPropertyDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PAPropertyDescriptor.m; path = "Dependency/PAPreferences/PAPreferences/PAPropertyDescriptor.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000128 /* GBCommandLineParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBCommandLineParser.m; path = "Dependency/GBCli/GBCli/src/GBCommandLineParser.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000130 /* GBOptionsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBOptionsHelper.m; path = "Dependency/GBCli/GBCli/src/GBOptionsHelper.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000132 /* GBPrint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBPrint.m; path = "Dependency/GBCli/GBCli/src/GBPrint.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000134 /* GBSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBSettings.m; path = "Dependency/GBCli/GBCli/src/GBSettings.m"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000136 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = autolink.h; path = "Dependency/hoedown/autolink.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000137 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = "Dependency/hoedown/buffer.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000138 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = document.h; path = "Dependency/hoedown/document.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000139 /* escape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = escape.h; path = "Dependency/hoedown/escape.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000140 /* html.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = html.h; path = "Dependency/hoedown/html.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000141 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stack.h; path = "Dependency/hoedown/stack.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000142 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = "Dependency/hoedown/version.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000143 /* yaml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yaml.h; path = "Dependency/LibYAML/include/yaml.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000144 /* yaml_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yaml_private.h; path = "Dependency/LibYAML/src/yaml_private.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000145 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = "Dependency/LibYAML/config.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000146 /* HBHandlebars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBHandlebars.h; path = "Dependency/handlebars-objc/src/handlebars-objc/HBHandlebars.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000147 /* HBAst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAst.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAst.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000148 /* HBAstBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstBlock.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstBlock.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000149 /* HBAstComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstComment.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstComment.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000150 /* HBAstNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstNode.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstNode.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000151 /* HBAstPartialTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstPartialTag.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstPartialTag.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000152 /* HBAstProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstProgram.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstProgram.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000153 /* HBAstRawText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstRawText.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstRawText.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000154 /* HBAstSimpleTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstSimpleTag.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstSimpleTag.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000155 /* HBAstTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstTag.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/HBAstTag.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000156 /* HBAstContextualValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstContextualValue.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstContextualValue.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000157 /* HBAstExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstExpression.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstExpression.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000158 /* HBAstKeyPathComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstKeyPathComponent.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstKeyPathComponent.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000159 /* HBAstNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstNumber.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstNumber.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000160 /* HBAstParametersHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstParametersHash.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstParametersHash.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000161 /* HBAstString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstString.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstString.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000162 /* HBAstValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstValue.h; path = "Dependency/handlebars-objc/src/handlebars-objc/ast/expression/HBAstValue.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000163 /* HBAstEvaluationVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstEvaluationVisitor.h; path = "Dependency/handlebars-objc/src/handlebars-objc/astVisitors/HBAstEvaluationVisitor.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000164 /* HBAstParserPostprocessingVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstParserPostprocessingVisitor.h; path = "Dependency/handlebars-objc/src/handlebars-objc/astVisitors/HBAstParserPostprocessingVisitor.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000165 /* HBAstParserTestVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstParserTestVisitor.h; path = "Dependency/handlebars-objc/src/handlebars-objc/astVisitors/HBAstParserTestVisitor.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000166 /* HBAstVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBAstVisitor.h; path = "Dependency/handlebars-objc/src/handlebars-objc/astVisitors/HBAstVisitor.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000167 /* HBContextRendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBContextRendering.h; path = "Dependency/handlebars-objc/src/handlebars-objc/context/HBContextRendering.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000168 /* HBContextStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBContextStack.h; path = "Dependency/handlebars-objc/src/handlebars-objc/context/HBContextStack.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000169 /* HBContextState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBContextState.h; path = "Dependency/handlebars-objc/src/handlebars-objc/context/HBContextState.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000170 /* HBDataContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBDataContext.h; path = "Dependency/handlebars-objc/src/handlebars-objc/context/HBDataContext.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000171 /* HBHandlebarsKVCValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBHandlebarsKVCValidation.h; path = "Dependency/handlebars-objc/src/handlebars-objc/context/HBHandlebarsKVCValidation.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000172 /* HBObjectPropertyAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBObjectPropertyAccess.h; path = "Dependency/handlebars-objc/src/handlebars-objc/context/HBObjectPropertyAccess.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000173 /* HBErrorHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBErrorHandling.h; path = "Dependency/handlebars-objc/src/handlebars-objc/errorHandling/HBErrorHandling.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000174 /* HBErrorHandling_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBErrorHandling_Private.h; path = "Dependency/handlebars-objc/src/handlebars-objc/errorHandling/HBErrorHandling_Private.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000175 /* HBBuiltinHelpersRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBBuiltinHelpersRegistry.h; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBBuiltinHelpersRegistry.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000176 /* HBEscapedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBEscapedString.h; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBEscapedString.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000177 /* HBEscapedString_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBEscapedString_Private.h; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBEscapedString_Private.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000178 /* HBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBHelper.h; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBHelper.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000179 /* HBHelperCallingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBHelperCallingInfo.h; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBHelperCallingInfo.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000180 /* HBHelperCallingInfo_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBHelperCallingInfo_Private.h; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBHelperCallingInfo_Private.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000181 /* HBHelperRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBHelperRegistry.h; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBHelperRegistry.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000182 /* HBHelperUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBHelperUtils.h; path = "Dependency/handlebars-objc/src/handlebars-objc/helpers/HBHelperUtils.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000183 /* HBParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBParser.h; path = "Dependency/handlebars-objc/src/handlebars-objc/parser/HBParser.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000184 /* HBPartial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBPartial.h; path = "Dependency/handlebars-objc/src/handlebars-objc/partials/HBPartial.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000185 /* HBPartialRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBPartialRegistry.h; path = "Dependency/handlebars-objc/src/handlebars-objc/partials/HBPartialRegistry.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000186 /* HBPartial_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBPartial_Private.h; path = "Dependency/handlebars-objc/src/handlebars-objc/partials/HBPartial_Private.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000187 /* HBEscapingFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBEscapingFunctions.h; path = "Dependency/handlebars-objc/src/handlebars-objc/runtime/HBEscapingFunctions.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000188 /* HBExecutionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBExecutionContext.h; path = "Dependency/handlebars-objc/src/handlebars-objc/runtime/HBExecutionContext.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000189 /* HBExecutionContextDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBExecutionContextDelegate.h; path = "Dependency/handlebars-objc/src/handlebars-objc/runtime/HBExecutionContextDelegate.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000190 /* HBExecutionContext_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBExecutionContext_Private.h; path = "Dependency/handlebars-objc/src/handlebars-objc/runtime/HBExecutionContext_Private.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000191 /* HBTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBTemplate.h; path = "Dependency/handlebars-objc/src/handlebars-objc/runtime/HBTemplate.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000192 /* HBTemplate_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBTemplate_Private.h; path = "Dependency/handlebars-objc/src/handlebars-objc/runtime/HBTemplate_Private.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000193 /* JJPluralForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJPluralForm.h; path = "Dependency/JJPluralForm/JJPluralForm/JJPluralForm.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000194 /* M13OrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13OrderedDictionary.h; path = "Dependency/M13OrderedDictionary/M13OrderedDictionary.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000195 /* MASPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASPreferences.h; path = "Dependency/MASPreferences/Framework/MASPreferences.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000196 /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASPreferencesViewController.h; path = "Dependency/MASPreferences/Framework/MASPreferencesViewController.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000197 /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASPreferencesWindowController.h; path = "Dependency/MASPreferences/Framework/MASPreferencesWindowController.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000198 /* PAPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PAPreferences.h; path = "Dependency/PAPreferences/PAPreferences/PAPreferences.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000199 /* PAPropertyDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PAPropertyDescriptor.h; path = "Dependency/PAPreferences/PAPreferences/PAPropertyDescriptor.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000200 /* GBCli.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBCli.h; path = "Dependency/GBCli/GBCli/src/GBCli.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000201 /* GBCommandLineParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBCommandLineParser.h; path = "Dependency/GBCli/GBCli/src/GBCommandLineParser.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000202 /* GBOptionsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBOptionsHelper.h; path = "Dependency/GBCli/GBCli/src/GBOptionsHelper.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000203 /* GBPrint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBPrint.h; path = "Dependency/GBCli/GBCli/src/GBPrint.h"; sourceTree = SOURCE_ROOT; };
+		D30000000000000000000204 /* GBSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBSettings.h; path = "Dependency/GBCli/GBCli/src/GBSettings.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -533,7 +735,7 @@
 				1FF1420219A8987500CF8A6A /* JavaScriptCore.framework in Frameworks */,
 				1FF207631941CF22005B5654 /* WebKit.framework in Frameworks */,
 				1FA6DE251941CC9E000409FB /* Cocoa.framework in Frameworks */,
-				770BB49E962A302D0715A6A5 /* libPods-MacDown.a in Frameworks */,
+				D30000000000000000000002 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +745,6 @@
 			files = (
 				1FA6DE481941CC9E000409FB /* Cocoa.framework in Frameworks */,
 				1FC29F5C1944FC2600D616C7 /* XCTest.framework in Frameworks */,
-				EBFE3157737058F5A63699C8 /* libPods-MacDownTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,7 +753,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				905EF1A9196164CA00FC3CE9 /* Foundation.framework in Frameworks */,
-				B5C5C1666A506FEA86435D25 /* libPods-macdown-cmd.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,8 +949,8 @@
 				1FCDCA2F1944F96E00B1F966 /* MacDownTests */,
 				905EF1AA196164CA00FC3CE9 /* macdown-cmd */,
 				1FA6DE231941CC9E000409FB /* Frameworks */,
+				D30000000000000000000214 /* Vendored Dependencies */,
 				1FA6DE221941CC9E000409FB /* Products */,
-				AC6D1A361B8B63012D598BC7 /* Pods */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
@@ -769,15 +969,12 @@
 			isa = PBXGroup;
 			children = (
 				1FF1420119A8987500CF8A6A /* JavaScriptCore.framework */,
-				1F51C9A1194564670015A96F /* libPods-MacDown-PAPreferences.a */,
 				1FC29F5B1944FC2600D616C7 /* XCTest.framework */,
 				1FF207621941CF22005B5654 /* WebKit.framework */,
 				1FA6DE241941CC9E000409FB /* Cocoa.framework */,
 				905EF1A8196164CA00FC3CE9 /* Foundation.framework */,
 				1FA6DE261941CC9E000409FB /* Other Frameworks */,
-				42F926DD38559C7CEDB6E42F /* libPods-MacDown.a */,
-				3C949FDE45493AE77DAD9BF4 /* libPods-MacDownTests.a */,
-				263367245B2D78A42C2F19D7 /* libPods-macdown-cmd.a */,
+				D30000000000000000000001 /* Sparkle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -882,17 +1079,218 @@
 			path = "macdown-cmd";
 			sourceTree = "<group>";
 		};
-		AC6D1A361B8B63012D598BC7 /* Pods */ = {
+		D30000000000000000000205 /* hoedown (vendored) */ = {
 			isa = PBXGroup;
 			children = (
-				1A198D1BA59D710201DD3BC8 /* Pods-MacDown.debug.xcconfig */,
-				39EFCAE04F60154F0C8C5469 /* Pods-MacDown.release.xcconfig */,
-				8CDC5EA0050D2F722FB1AADD /* Pods-MacDownTests.debug.xcconfig */,
-				0D0EC0DE9FEA22F962083921 /* Pods-MacDownTests.release.xcconfig */,
-				4DBAA63927A60EB2150642B3 /* Pods-macdown-cmd.debug.xcconfig */,
-				7A8EA75FA95818275755F0B6 /* Pods-macdown-cmd.release.xcconfig */,
+				D30000000000000000000006 /* autolink.c */,
+				D30000000000000000000008 /* buffer.c */,
+				D30000000000000000000010 /* document.c */,
+				D30000000000000000000012 /* escape.c */,
+				D30000000000000000000014 /* html.c */,
+				D30000000000000000000016 /* html_blocks.c */,
+				D30000000000000000000018 /* html_smartypants.c */,
+				D30000000000000000000020 /* stack.c */,
+				D30000000000000000000022 /* version.c */,
+				D30000000000000000000136 /* autolink.h */,
+				D30000000000000000000137 /* buffer.h */,
+				D30000000000000000000138 /* document.h */,
+				D30000000000000000000139 /* escape.h */,
+				D30000000000000000000140 /* html.h */,
+				D30000000000000000000141 /* stack.h */,
+				D30000000000000000000142 /* version.h */,
 			);
-			name = Pods;
+			name = "hoedown (vendored)";
+			sourceTree = "<group>";
+		};
+		D30000000000000000000206 /* LibYAML (vendored) */ = {
+			isa = PBXGroup;
+			children = (
+				D30000000000000000000024 /* api.c */,
+				D30000000000000000000026 /* dumper.c */,
+				D30000000000000000000028 /* emitter.c */,
+				D30000000000000000000030 /* loader.c */,
+				D30000000000000000000032 /* parser.c */,
+				D30000000000000000000034 /* reader.c */,
+				D30000000000000000000036 /* scanner.c */,
+				D30000000000000000000038 /* writer.c */,
+				D30000000000000000000143 /* yaml.h */,
+				D30000000000000000000144 /* yaml_private.h */,
+				D30000000000000000000145 /* config.h */,
+			);
+			name = "LibYAML (vendored)";
+			sourceTree = "<group>";
+		};
+		D30000000000000000000207 /* handlebars-objc (vendored) */ = {
+			isa = PBXGroup;
+			children = (
+				D30000000000000000000040 /* HBHandlebars.m */,
+				D30000000000000000000042 /* HBAstBlock.m */,
+				D30000000000000000000044 /* HBAstComment.m */,
+				D30000000000000000000046 /* HBAstNode.m */,
+				D30000000000000000000048 /* HBAstPartialTag.m */,
+				D30000000000000000000050 /* HBAstProgram.m */,
+				D30000000000000000000052 /* HBAstRawText.m */,
+				D30000000000000000000054 /* HBAstSimpleTag.m */,
+				D30000000000000000000056 /* HBAstTag.m */,
+				D30000000000000000000058 /* HBAstContextualValue.m */,
+				D30000000000000000000060 /* HBAstExpression.m */,
+				D30000000000000000000062 /* HBAstKeyPathComponent.m */,
+				D30000000000000000000064 /* HBAstNumber.m */,
+				D30000000000000000000066 /* HBAstParametersHash.m */,
+				D30000000000000000000068 /* HBAstString.m */,
+				D30000000000000000000070 /* HBAstValue.m */,
+				D30000000000000000000072 /* HBAstEvaluationVisitor.m */,
+				D30000000000000000000074 /* HBAstParserPostprocessingVisitor.m */,
+				D30000000000000000000076 /* HBAstParserTestVisitor.m */,
+				D30000000000000000000078 /* HBAstVisitor.m */,
+				D30000000000000000000080 /* HBContextRendering.m */,
+				D30000000000000000000082 /* HBContextStack.m */,
+				D30000000000000000000084 /* HBContextState.m */,
+				D30000000000000000000086 /* HBDataContext.m */,
+				D30000000000000000000088 /* HBObjectPropertyAccess.m */,
+				D30000000000000000000090 /* HBErrorHandling.m */,
+				D30000000000000000000092 /* HBBuiltinHelpersRegistry.m */,
+				D30000000000000000000094 /* HBEscapedString.m */,
+				D30000000000000000000096 /* HBHelper.m */,
+				D30000000000000000000098 /* HBHelperCallingInfo.m */,
+				D30000000000000000000100 /* HBHelperRegistry.m */,
+				D30000000000000000000102 /* HBHelperUtils.m */,
+				D30000000000000000000104 /* HBParser.m */,
+				D30000000000000000000106 /* HBPartial.m */,
+				D30000000000000000000108 /* HBPartialRegistry.m */,
+				D30000000000000000000110 /* HBEscapingFunctions.m */,
+				D30000000000000000000112 /* HBExecutionContext.m */,
+				D30000000000000000000114 /* HBTemplate.m */,
+				D30000000000000000000146 /* HBHandlebars.h */,
+				D30000000000000000000147 /* HBAst.h */,
+				D30000000000000000000148 /* HBAstBlock.h */,
+				D30000000000000000000149 /* HBAstComment.h */,
+				D30000000000000000000150 /* HBAstNode.h */,
+				D30000000000000000000151 /* HBAstPartialTag.h */,
+				D30000000000000000000152 /* HBAstProgram.h */,
+				D30000000000000000000153 /* HBAstRawText.h */,
+				D30000000000000000000154 /* HBAstSimpleTag.h */,
+				D30000000000000000000155 /* HBAstTag.h */,
+				D30000000000000000000156 /* HBAstContextualValue.h */,
+				D30000000000000000000157 /* HBAstExpression.h */,
+				D30000000000000000000158 /* HBAstKeyPathComponent.h */,
+				D30000000000000000000159 /* HBAstNumber.h */,
+				D30000000000000000000160 /* HBAstParametersHash.h */,
+				D30000000000000000000161 /* HBAstString.h */,
+				D30000000000000000000162 /* HBAstValue.h */,
+				D30000000000000000000163 /* HBAstEvaluationVisitor.h */,
+				D30000000000000000000164 /* HBAstParserPostprocessingVisitor.h */,
+				D30000000000000000000165 /* HBAstParserTestVisitor.h */,
+				D30000000000000000000166 /* HBAstVisitor.h */,
+				D30000000000000000000167 /* HBContextRendering.h */,
+				D30000000000000000000168 /* HBContextStack.h */,
+				D30000000000000000000169 /* HBContextState.h */,
+				D30000000000000000000170 /* HBDataContext.h */,
+				D30000000000000000000171 /* HBHandlebarsKVCValidation.h */,
+				D30000000000000000000172 /* HBObjectPropertyAccess.h */,
+				D30000000000000000000173 /* HBErrorHandling.h */,
+				D30000000000000000000174 /* HBErrorHandling_Private.h */,
+				D30000000000000000000175 /* HBBuiltinHelpersRegistry.h */,
+				D30000000000000000000176 /* HBEscapedString.h */,
+				D30000000000000000000177 /* HBEscapedString_Private.h */,
+				D30000000000000000000178 /* HBHelper.h */,
+				D30000000000000000000179 /* HBHelperCallingInfo.h */,
+				D30000000000000000000180 /* HBHelperCallingInfo_Private.h */,
+				D30000000000000000000181 /* HBHelperRegistry.h */,
+				D30000000000000000000182 /* HBHelperUtils.h */,
+				D30000000000000000000183 /* HBParser.h */,
+				D30000000000000000000184 /* HBPartial.h */,
+				D30000000000000000000185 /* HBPartialRegistry.h */,
+				D30000000000000000000186 /* HBPartial_Private.h */,
+				D30000000000000000000187 /* HBEscapingFunctions.h */,
+				D30000000000000000000188 /* HBExecutionContext.h */,
+				D30000000000000000000189 /* HBExecutionContextDelegate.h */,
+				D30000000000000000000190 /* HBExecutionContext_Private.h */,
+				D30000000000000000000191 /* HBTemplate.h */,
+				D30000000000000000000192 /* HBTemplate_Private.h */,
+			);
+			name = "handlebars-objc (vendored)";
+			sourceTree = "<group>";
+		};
+		D30000000000000000000208 /* JJPluralForm (vendored) */ = {
+			isa = PBXGroup;
+			children = (
+				D30000000000000000000116 /* JJPluralForm.m */,
+				D30000000000000000000193 /* JJPluralForm.h */,
+			);
+			name = "JJPluralForm (vendored)";
+			sourceTree = "<group>";
+		};
+		D30000000000000000000209 /* M13OrderedDictionary (vendored) */ = {
+			isa = PBXGroup;
+			children = (
+				D30000000000000000000118 /* M13OrderedDictionary.m */,
+				D30000000000000000000194 /* M13OrderedDictionary.h */,
+			);
+			name = "M13OrderedDictionary (vendored)";
+			sourceTree = "<group>";
+		};
+		D30000000000000000000210 /* MASPreferences (vendored) */ = {
+			isa = PBXGroup;
+			children = (
+				D30000000000000000000120 /* MASPreferencesWindowController.m */,
+				D30000000000000000000195 /* MASPreferences.h */,
+				D30000000000000000000196 /* MASPreferencesViewController.h */,
+				D30000000000000000000197 /* MASPreferencesWindowController.h */,
+				D30000000000000000000004 /* MASPreferencesWindow.xib */,
+			);
+			name = "MASPreferences (vendored)";
+			sourceTree = "<group>";
+		};
+		D30000000000000000000211 /* PAPreferences (vendored) */ = {
+			isa = PBXGroup;
+			children = (
+				D30000000000000000000122 /* PAPreferences.m */,
+				D30000000000000000000124 /* PAPropertyDescriptor.m */,
+				D30000000000000000000198 /* PAPreferences.h */,
+				D30000000000000000000199 /* PAPropertyDescriptor.h */,
+			);
+			name = "PAPreferences (vendored)";
+			sourceTree = "<group>";
+		};
+		D30000000000000000000212 /* GBCli (vendored) */ = {
+			isa = PBXGroup;
+			children = (
+				D30000000000000000000128 /* GBCommandLineParser.m */,
+				D30000000000000000000130 /* GBOptionsHelper.m */,
+				D30000000000000000000132 /* GBPrint.m */,
+				D30000000000000000000134 /* GBSettings.m */,
+				D30000000000000000000200 /* GBCli.h */,
+				D30000000000000000000201 /* GBCommandLineParser.h */,
+				D30000000000000000000202 /* GBOptionsHelper.h */,
+				D30000000000000000000203 /* GBPrint.h */,
+				D30000000000000000000204 /* GBSettings.h */,
+			);
+			name = "GBCli (vendored)";
+			sourceTree = "<group>";
+		};
+		D30000000000000000000213 /* Sparkle (vendored) */ = {
+			isa = PBXGroup;
+			children = (
+				D30000000000000000000001 /* Sparkle.framework */,
+			);
+			name = "Sparkle (vendored)";
+			sourceTree = "<group>";
+		};
+		D30000000000000000000214 /* Vendored Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				D30000000000000000000205 /* hoedown (vendored) */,
+				D30000000000000000000206 /* LibYAML (vendored) */,
+				D30000000000000000000207 /* handlebars-objc (vendored) */,
+				D30000000000000000000208 /* JJPluralForm (vendored) */,
+				D30000000000000000000209 /* M13OrderedDictionary (vendored) */,
+				D30000000000000000000210 /* MASPreferences (vendored) */,
+				D30000000000000000000211 /* PAPreferences (vendored) */,
+				D30000000000000000000212 /* GBCli (vendored) */,
+				D30000000000000000000213 /* Sparkle (vendored) */,
+			);
+			name = "Vendored Dependencies";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -902,7 +1300,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FA6DE551941CC9E000409FB /* Build configuration list for PBXNativeTarget "MacDown" */;
 			buildPhases = (
-				B4334ECDC0751C835C1600D7 /* [CP] Check Pods Manifest.lock */,
 				1FA6DE1D1941CC9E000409FB /* Sources */,
 				1FA6DE1E1941CC9E000409FB /* Frameworks */,
 				1FF16580199A6C950080D9A5 /* Fetch Prism Resources */,
@@ -910,8 +1307,7 @@
 				1FA6DE1F1941CC9E000409FB /* Resources */,
 				1F8A82A81952F19B00B6BF69 /* Update Build Number */,
 				905EF1B6196164E300FC3CE9 /* Copy Command Line Utility */,
-				C5B8C48273E72106885CA8C4 /* [CP] Embed Pods Frameworks */,
-				1E02F0A95AAEBCEF65493F5F /* [CP] Copy Pods Resources */,
+				D30000000000000000000215 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -928,7 +1324,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FA6DE581941CC9E000409FB /* Build configuration list for PBXNativeTarget "MacDownTests" */;
 			buildPhases = (
-				655CCD821E310F9767572216 /* [CP] Check Pods Manifest.lock */,
 				1FA6DE411941CC9E000409FB /* Sources */,
 				1FA6DE421941CC9E000409FB /* Frameworks */,
 				1FA6DE431941CC9E000409FB /* Resources */,
@@ -947,7 +1342,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 905EF1B3196164CA00FC3CE9 /* Build configuration list for PBXNativeTarget "macdown-cmd" */;
 			buildPhases = (
-				6C852F8D7610992AEEA172AE /* [CP] Check Pods Manifest.lock */,
 				905EF1A3196164CA00FC3CE9 /* Sources */,
 				905EF1A4196164CA00FC3CE9 /* Frameworks */,
 				905EF1A5196164CA00FC3CE9 /* Copy Files */,
@@ -1060,6 +1454,7 @@
 				1F3FC8AA1C85AE9F000965E1 /* MacDown.sdef in Resources */,
 				1FB3C0241E5061A2002AEB6A /* MPExportPanelAccessoryViewController.xib in Resources */,
 				3028039E1FD84EAC0055B0DA /* contribute.md in Resources */,
+				D30000000000000000000005 /* MASPreferencesWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1077,24 +1472,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1E02F0A95AAEBCEF65493F5F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MacDown/Pods-MacDown-resources.sh",
-				"${PODS_ROOT}/MASPreferences/Framework/en.lproj/MASPreferencesWindow.xib",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MASPreferencesWindow.nib",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MacDown/Pods-MacDown-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1F8A82A81952F19B00B6BF69 /* Update Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1123,80 +1500,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "SOURCE=\"$PWD/Dependency/prism\"\nTARGET=\"$PWD/MacDown/Resources/Prism\"\nrm -rf \"$TARGET\"\nmkdir -p \"$TARGET\"\ncp -r \"$SOURCE/components\" \"$TARGET\"\ncp -r \"$SOURCE/themes\" \"$TARGET\"\ncp -r \"$SOURCE/plugins\" \"$TARGET\"\ncp -r \"$SOURCE/components.js\" \"$TARGET\"\n";
-			showEnvVarsInLog = 0;
-		};
-		655CCD821E310F9767572216 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MacDownTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C852F8D7610992AEEA172AE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-macdown-cmd-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B4334ECDC0751C835C1600D7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MacDown-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C5B8C48273E72106885CA8C4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MacDown/Pods-MacDown-frameworks.sh",
-				"${PODS_ROOT}/Sparkle/Sparkle.framework",
-				"${PODS_ROOT}/Sparkle/Sparkle.framework.dSYM",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sparkle.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Sparkle.framework.dSYM",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MacDown/Pods-MacDown-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E7FD807B2106CA8F0087F0A8 /* Transpile Styles */ = {
@@ -1257,6 +1560,66 @@
 				1F8A835D1953454F00B6BF69 /* HGMarkdownHighlighter.m in Sources */,
 				1F847BC61DCC9DB600A47385 /* NSUserDefaults+Suite.m in Sources */,
 				1F3386E61A6B999600FC88C4 /* DOMNode+Text.m in Sources */,
+				D30000000000000000000007 /* autolink.c in Sources */,
+				D30000000000000000000009 /* buffer.c in Sources */,
+				D30000000000000000000011 /* document.c in Sources */,
+				D30000000000000000000013 /* escape.c in Sources */,
+				D30000000000000000000015 /* html.c in Sources */,
+				D30000000000000000000017 /* html_blocks.c in Sources */,
+				D30000000000000000000019 /* html_smartypants.c in Sources */,
+				D30000000000000000000021 /* stack.c in Sources */,
+				D30000000000000000000023 /* version.c in Sources */,
+				D30000000000000000000025 /* api.c in Sources */,
+				D30000000000000000000027 /* dumper.c in Sources */,
+				D30000000000000000000029 /* emitter.c in Sources */,
+				D30000000000000000000031 /* loader.c in Sources */,
+				D30000000000000000000033 /* parser.c in Sources */,
+				D30000000000000000000035 /* reader.c in Sources */,
+				D30000000000000000000037 /* scanner.c in Sources */,
+				D30000000000000000000039 /* writer.c in Sources */,
+				D30000000000000000000041 /* HBHandlebars.m in Sources */,
+				D30000000000000000000043 /* HBAstBlock.m in Sources */,
+				D30000000000000000000045 /* HBAstComment.m in Sources */,
+				D30000000000000000000047 /* HBAstNode.m in Sources */,
+				D30000000000000000000049 /* HBAstPartialTag.m in Sources */,
+				D30000000000000000000051 /* HBAstProgram.m in Sources */,
+				D30000000000000000000053 /* HBAstRawText.m in Sources */,
+				D30000000000000000000055 /* HBAstSimpleTag.m in Sources */,
+				D30000000000000000000057 /* HBAstTag.m in Sources */,
+				D30000000000000000000059 /* HBAstContextualValue.m in Sources */,
+				D30000000000000000000061 /* HBAstExpression.m in Sources */,
+				D30000000000000000000063 /* HBAstKeyPathComponent.m in Sources */,
+				D30000000000000000000065 /* HBAstNumber.m in Sources */,
+				D30000000000000000000067 /* HBAstParametersHash.m in Sources */,
+				D30000000000000000000069 /* HBAstString.m in Sources */,
+				D30000000000000000000071 /* HBAstValue.m in Sources */,
+				D30000000000000000000073 /* HBAstEvaluationVisitor.m in Sources */,
+				D30000000000000000000075 /* HBAstParserPostprocessingVisitor.m in Sources */,
+				D30000000000000000000077 /* HBAstParserTestVisitor.m in Sources */,
+				D30000000000000000000079 /* HBAstVisitor.m in Sources */,
+				D30000000000000000000081 /* HBContextRendering.m in Sources */,
+				D30000000000000000000083 /* HBContextStack.m in Sources */,
+				D30000000000000000000085 /* HBContextState.m in Sources */,
+				D30000000000000000000087 /* HBDataContext.m in Sources */,
+				D30000000000000000000089 /* HBObjectPropertyAccess.m in Sources */,
+				D30000000000000000000091 /* HBErrorHandling.m in Sources */,
+				D30000000000000000000093 /* HBBuiltinHelpersRegistry.m in Sources */,
+				D30000000000000000000095 /* HBEscapedString.m in Sources */,
+				D30000000000000000000097 /* HBHelper.m in Sources */,
+				D30000000000000000000099 /* HBHelperCallingInfo.m in Sources */,
+				D30000000000000000000101 /* HBHelperRegistry.m in Sources */,
+				D30000000000000000000103 /* HBHelperUtils.m in Sources */,
+				D30000000000000000000105 /* HBParser.m in Sources */,
+				D30000000000000000000107 /* HBPartial.m in Sources */,
+				D30000000000000000000109 /* HBPartialRegistry.m in Sources */,
+				D30000000000000000000111 /* HBEscapingFunctions.m in Sources */,
+				D30000000000000000000113 /* HBExecutionContext.m in Sources */,
+				D30000000000000000000115 /* HBTemplate.m in Sources */,
+				D30000000000000000000117 /* JJPluralForm.m in Sources */,
+				D30000000000000000000119 /* M13OrderedDictionary.m in Sources */,
+				D30000000000000000000121 /* MASPreferencesWindowController.m in Sources */,
+				D30000000000000000000123 /* PAPreferences.m in Sources */,
+				D30000000000000000000125 /* PAPropertyDescriptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1270,6 +1633,8 @@
 				1FFEB3271972DAB400B2254F /* MPHTMLTabularizeTests.m in Sources */,
 				1F25E1C31A50F4F10029371D /* MPColorTests.m in Sources */,
 				1FFF301D1948A5320009AF24 /* MPStringLookupTests.m in Sources */,
+				D30000000000000000000126 /* PAPreferences.m in Sources */,
+				D30000000000000000000127 /* PAPropertyDescriptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1280,6 +1645,10 @@
 				1FBE8E0F1A11DB1E003E1EF4 /* main.m in Sources */,
 				1F8858BC1A2D8D82008DC543 /* MPArgumentProcessor.m in Sources */,
 				1FEAFEA21DCE762C008C4E8C /* NSUserDefaults+Suite.m in Sources */,
+				D30000000000000000000129 /* GBCommandLineParser.m in Sources */,
+				D30000000000000000000131 /* GBOptionsHelper.m in Sources */,
+				D30000000000000000000133 /* GBPrint.m in Sources */,
+				D30000000000000000000135 /* GBSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1747,8 +2116,39 @@
 		};
 		1FA6DE561941CC9E000409FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A198D1BA59D710201DD3BC8 /* Pods-MacDown.debug.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Dependency/Include",
+					"$(SRCROOT)/Dependency",
+					"$(SRCROOT)/Dependency/LibYAML/include",
+					"$(SRCROOT)/Dependency/LibYAML",
+					"$(SRCROOT)/Dependency/LibYAML/src",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/ast",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/ast/expression",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/astVisitors",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/context",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/errorHandling",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/helpers",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/parser",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/partials",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/runtime",
+					"$(SRCROOT)/Dependency/JJPluralForm/JJPluralForm",
+					"$(SRCROOT)/Dependency/M13OrderedDictionary",
+					"$(SRCROOT)/Dependency/MASPreferences/Framework",
+					"$(SRCROOT)/Dependency/PAPreferences/PAPreferences",
+					"$(SRCROOT)/Dependency/YAML-framework",
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Dependency/Sparkle",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					HAVE_CONFIG_H,
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1765,8 +2165,39 @@
 		};
 		1FA6DE571941CC9E000409FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39EFCAE04F60154F0C8C5469 /* Pods-MacDown.release.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Dependency/Include",
+					"$(SRCROOT)/Dependency",
+					"$(SRCROOT)/Dependency/LibYAML/include",
+					"$(SRCROOT)/Dependency/LibYAML",
+					"$(SRCROOT)/Dependency/LibYAML/src",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/ast",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/ast/expression",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/astVisitors",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/context",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/errorHandling",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/helpers",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/parser",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/partials",
+					"$(SRCROOT)/Dependency/handlebars-objc/src/handlebars-objc/runtime",
+					"$(SRCROOT)/Dependency/JJPluralForm/JJPluralForm",
+					"$(SRCROOT)/Dependency/M13OrderedDictionary",
+					"$(SRCROOT)/Dependency/MASPreferences/Framework",
+					"$(SRCROOT)/Dependency/PAPreferences/PAPreferences",
+					"$(SRCROOT)/Dependency/YAML-framework",
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Dependency/Sparkle",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					HAVE_CONFIG_H,
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1783,8 +2214,12 @@
 		};
 		1FA6DE591941CC9E000409FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CDC5EA0050D2F722FB1AADD /* Pods-MacDownTests.debug.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Dependency/Include",
+					"$(SRCROOT)/Dependency/PAPreferences/PAPreferences",
+				);
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MacDown.app/Contents/MacOS/MacDown";
 				CLANG_ENABLE_MODULES = NO;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1801,7 +2236,6 @@
 				INFOPLIST_FILE = "MacDownTests/MacDownTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MacDown-ggdtxvuybojeqbhjydkhilziizrv/Build/Products/Debug",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.uranusjr.${PRODUCT_NAME:rfc1034identifier:lower}";
@@ -1813,8 +2247,12 @@
 		};
 		1FA6DE5A1941CC9E000409FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D0EC0DE9FEA22F962083921 /* Pods-MacDownTests.release.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Dependency/Include",
+					"$(SRCROOT)/Dependency/PAPreferences/PAPreferences",
+				);
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MacDown.app/Contents/MacOS/MacDown";
 				CLANG_ENABLE_MODULES = NO;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1827,7 +2265,6 @@
 				INFOPLIST_FILE = "MacDownTests/MacDownTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MacDown-ggdtxvuybojeqbhjydkhilziizrv/Build/Products/Debug",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.uranusjr.${PRODUCT_NAME:rfc1034identifier:lower}";
@@ -1839,8 +2276,12 @@
 		};
 		905EF1B1196164CA00FC3CE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DBAA63927A60EB2150642B3 /* Pods-macdown-cmd.debug.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Dependency/Include",
+					"$(SRCROOT)/Dependency/GBCli/GBCli/src",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1854,8 +2295,12 @@
 		};
 		905EF1B2196164CA00FC3CE9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A8EA75FA95818275755F0B6 /* Pods-macdown-cmd.release.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Dependency/Include",
+					"$(SRCROOT)/Dependency/GBCli/GBCli/src",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
 				PRODUCT_NAME = macdown;

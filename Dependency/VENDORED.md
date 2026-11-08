@@ -18,11 +18,20 @@ carried from Podfile.lock COCOAPODS 1.8.4.
 | MASPreferences | 1.3 | trunk MASPreferences.podspec.json (cdn.cocoapods.org Specs/6/0/2/): git https://github.com/shpakovski/MASPreferences.git tag 1.3, source_files `Framework/*.{h,m}`, resources `Framework/en.lproj/*.xib`, requires_arc true | git clone --branch 1.3 (HEAD 45e5ff67d19babc53414970b0a5db9586a494a96); `Framework/*.{h,m}` (4 files) + `Framework/en.lproj/MASPreferencesWindow.xib` (podspec resource) + LICENSE.md copied verbatim | c08b8622dd17b47da87669e741efd7c92e970e8c | Dependency/MASPreferences/ | BSD (LICENSE.md in-tree; also LICENSE/maspreferences.txt) |
 | PAPreferences | 0.5 | trunk PAPreferences.podspec.json (cdn.cocoapods.org Specs/f/5/9/): git https://github.com/dhennessy/PAPreferences.git tag 0.5, source_files `PAPreferences`, requires_arc true. Vendored 0.5 as locked (files/05 §4) | git clone --branch 0.5 (HEAD dcc3f826e94ed8e0b22982aed92cc9520214307b); `PAPreferences/*.{h,m}` (4 files) + LICENSE copied verbatim | 9f0ffb1e67174a0df001af9d3320166ceb9ee6f5 | Dependency/PAPreferences/ | BSD (LICENSE in-tree; also LICENSE/papreferences.txt) |
 
-Remaining pods (V-3, not yet vendored): Sparkle 1.18.1 (pinned binary
-framework, V-3).
+| Sparkle | 1.18.1 | trunk Sparkle.podspec.json (cdn.cocoapods.org Specs/7/c/d/): source http https://github.com/sparkle-project/Sparkle/releases/download/1.18.1/Sparkle-1.18.1.tar.bz2, vendored_frameworks `Sparkle.framework`, requires_arc true | tarball sha256 7a7a486d2c5adb75bdd78775946da2b37b82b93cb3eea96049f7b1d8569f11cc; `Sparkle.framework` extracted verbatim (symlinks/structure preserved; binary `Versions/A/Sparkle` = Mach-O 64-bit x86_64 dynamically linked shared library, sha256 56eb2d1e9d00db3efce2127bb7ed13ca89500b04aebab4cab2c05a75c81d50aa; framework Info.plist CFBundleVersion 1.18.1, CFBundleShortVersionString "1.18.1 21-g558cfd21") + tarball LICENSE copied alongside | 06ea33170007c5937ee54da481b4481af98fac79 | Dependency/Sparkle/Sparkle.framework | MIT (LICENSE in-tree, alongside framework and inside it) |
 
-Project-file integration (target membership + header search paths) lands with
-V-3's Pods removal: the search paths today come from CocoaPods-generated
-xcconfigs, so repointing them before the Pods project is removed would leave
-two competing path sets. V-1's verification is at the syntax-compile level
-with the vendored trees on the include path explicitly (files/06-V1-VENDORING.md).
+Remaining pods: none — all 9 locked pods are vendored (V-1 C pods, V-2 ObjC
+pods, V-3 Sparkle binary).
+
+Project-file integration LANDED with V-3 (this step): CocoaPods removed
+(Podfile/Podfile.lock deleted, Gemfile cocoapods pin removed, all Pods
+references stripped from MacDown.xcodeproj, workspace reduced to the app
+project). Vendored sources are members of the MacDown / MacDownTests /
+macdown-cmd targets as the pods' targets were; header/framework search paths
+are explicit target build settings pointing at the vendored trees.
+Framework-style imports (`<HBHandlebars/…>`, `<MASPreferences/…>`,
+`<PAPreferences/…>`, `<JJPluralForm/…>`, `<M13OrderedDictionary/…>`,
+`<GBCli/…>`) resolve through `Dependency/Include/` — a symlink farm mirroring
+CocoaPods' own header_dir mapping (each entry is a symlink to the vendored
+tree, no header is copied); `<hoedown/…>` resolves via `Dependency/` itself
+and `"yaml.h"`/`config.h` via the LibYAML tree. Record: files/08-V3-SPARKLE-PODS-REMOVAL.md.
