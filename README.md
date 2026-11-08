@@ -1,3 +1,5 @@
+> **Academy fork notice:** This is the Detroit Automation Academy's fork of [MacDownApp/macdown](https://github.com/MacDownApp/macdown) (MIT License; original author Tzu-ping Chung (uranusjr) + contributors), maintained for the macOS High Sierra 10.13 baseline. Fork point: master `3e2a2bf101c215c143bf00d9f857965f0ee82487`. See [PROVENANCE.md](PROVENANCE.md) for full provenance.
+
 # MacDown
 
 [![](https://img.shields.io/github/release/MacDownApp/macdown.svg)](http://macdown.uranusjr.com/download/latest/)
