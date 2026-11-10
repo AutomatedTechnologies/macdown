@@ -4,6 +4,11 @@ on:
   push:
     branches: [build-test-macdown]
   workflow_dispatch:
+    inputs:
+      build_tag:
+        description: "Explicit build tag (SDS-10 tranche pattern, cf. Distro version_override). Required for a publishing run: the tag is the next sequential registry tag, NOT the Actions run number — run #12 was a cancelled duplicate, so run_number no longer equals the tag sequence."
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -16,6 +21,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+
+      - name: Resolve build tag
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ inputs.build_tag }}" ]; then
+            TAG="${{ inputs.build_tag }}"
+          else
+            TAG="macdown-test-${{ github.run_number }}"
+          fi
+          echo "BUILD_TAG=$TAG" >> "$GITHUB_ENV"
+          echo "Resolved BUILD_TAG=$TAG (event ${{ github.event_name }}, run ${{ github.run_number }})"
 
       - name: Report Xcode and SDK
         run: |
@@ -52,6 +67,7 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             MACOSX_DEPLOYMENT_TARGET=10.13 \
             ARCHS=x86_64 \
+            CURRENT_PROJECT_VERSION="$BUILD_TAG" \
             build 2>&1 | tee xcodebuild.log
 
       - name: Upload full xcodebuild log (always)
@@ -81,12 +97,16 @@ jobs:
           name: macdown-test-zip
           path: MacDown-test.zip
 
+      # Publishing is dispatch-only (2026-11-10, SDS10-T3): a push
+      # run is a build proof and must never publish, because its
+      # run-number tag no longer matches the registry's sequential
+      # tag (run #12 was a cancelled duplicate of the test-11 run).
       - name: Publish prerelease with test build
-        if: success()
+        if: success() && github.event_name == 'workflow_dispatch'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create macdown-test-${{ github.run_number }} MacDown-test.zip \
+          gh release create "$BUILD_TAG" MacDown-test.zip \
             --prerelease \
-            --title "MacDown — first Academy release candidate (test build ${{ github.run_number }})" \
-            --notes "First Academy release-candidate build of MacDown (CI build proof, V-4). Ships the Academy bundle ID com.detroitautomationacademy.macdown and the Academy audit entry in the app Info.plist. Lineage: F-02 Hoedown nesting-bound fix + U1 updater repoint + F-05 V-1..V-3 vendoring (CocoaPods removed). NOT rig-verified on High Sierra. Findings F-01/F-02/F-03/F-05/F-06 remain OPEN — this build closes nothing. NOT A RELEASE."
+            --title "MacDown — Academy build $BUILD_TAG (SDS-10 conformance)" \
+            --notes "Academy build $BUILD_TAG of MacDown (SDS10-T3 conformance build). Ships the Academy bundle ID com.detroitautomationacademy.macdown, the Academy audit entry, and the SDS-10 conformance entry in the app Info.plist. New in this build: the SDS-8 welcome screen (MPWelcomeController — the AppIcon composition as the welcome mark, the build version read from the bundle Info.plist at runtime, the standard startup sound, byte-identical to the library master) and the bundled Academy license and notice files. Lineage: F-02 Hoedown nesting-bound fix + F-10 toolbar guard + U1 updater repoint + F-05 V-1..V-3 vendoring (CocoaPods removed). NOT rig-verified on High Sierra. Findings F-01/F-02/F-03/F-05/F-06 remain OPEN. NOT A RELEASE."

@@ -57,6 +57,10 @@
 		1F96BD801E584A03005E0456 /* MPHomebrewSubprocessController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F96BD7F1E584A03005E0456 /* MPHomebrewSubprocessController.m */; };
 		1F9A14EC194EEE9900D1C6A9 /* MPExportPanelAccessoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A14E9194EEE9900D1C6A9 /* MPExportPanelAccessoryViewController.m */; };
 		1F9A14ED194EEE9900D1C6A9 /* MPMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A14EB194EEE9900D1C6A9 /* MPMainController.m */; };
+		DA00000000000000000000B1 /* MPWelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA00000000000000000000B3 /* MPWelcomeController.m */; };
+		DA00000000000000000000B4 /* startup-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA00000000000000000000B5 /* startup-sound.wav */; };
+		DA00000000000000000000B6 /* LICENSE-ACADEMY.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA00000000000000000000B7 /* LICENSE-ACADEMY.txt */; };
+		DA00000000000000000000B8 /* NOTICE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA00000000000000000000B9 /* NOTICE.txt */; };
 		1F9A14EF194EEEDD00D1C6A9 /* Styles in Resources */ = {isa = PBXBuildFile; fileRef = 1F9A14EE194EEEDD00D1C6A9 /* Styles */; };
 		1F9A14F4194EF6A600D1C6A9 /* Themes in Resources */ = {isa = PBXBuildFile; fileRef = 1F9A14F3194EF6A600D1C6A9 /* Themes */; };
 		1FA6DE251941CC9E000409FB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA6DE241941CC9E000409FB /* Cocoa.framework */; };
@@ -462,6 +466,11 @@
 		1F9A14E9194EEE9900D1C6A9 /* MPExportPanelAccessoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPExportPanelAccessoryViewController.m; path = Code/Application/MPExportPanelAccessoryViewController.m; sourceTree = "<group>"; };
 		1F9A14EA194EEE9900D1C6A9 /* MPMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPMainController.h; path = Code/Application/MPMainController.h; sourceTree = "<group>"; };
 		1F9A14EB194EEE9900D1C6A9 /* MPMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPMainController.m; path = Code/Application/MPMainController.m; sourceTree = "<group>"; };
+		DA00000000000000000000B2 /* MPWelcomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPWelcomeController.h; path = Code/Application/MPWelcomeController.h; sourceTree = "<group>"; };
+		DA00000000000000000000B3 /* MPWelcomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPWelcomeController.m; path = Code/Application/MPWelcomeController.m; sourceTree = "<group>"; };
+		DA00000000000000000000B5 /* startup-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "startup-sound.wav"; path = "Resources/startup-sound.wav"; sourceTree = "<group>"; };
+		DA00000000000000000000B7 /* LICENSE-ACADEMY.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "LICENSE-ACADEMY.txt"; path = "Resources/LICENSE-ACADEMY.txt"; sourceTree = "<group>"; };
+		DA00000000000000000000B9 /* NOTICE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "NOTICE.txt"; path = "Resources/NOTICE.txt"; sourceTree = "<group>"; };
 		1F9A14EE194EEEDD00D1C6A9 /* Styles */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Styles; path = Resources/Styles; sourceTree = "<group>"; };
 		1F9A14F3194EF6A600D1C6A9 /* Themes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Themes; path = Resources/Themes; sourceTree = "<group>"; };
 		1F9F351C2099A1FC00C4B4F1 /* sk-SK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sk-SK"; path = "Localization/sk-SK.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -877,6 +886,9 @@
 				1F8A82D819533E9300B6BF69 /* Prism */,
 				1F4C8E99194AE0B9004BF82E /* MarkdownDocument.icns */,
 				1F0D9DA6194AC8CB008E1856 /* Credits.rtf */,
+				DA00000000000000000000B5 /* startup-sound.wav */,
+				DA00000000000000000000B7 /* LICENSE-ACADEMY.txt */,
+				DA00000000000000000000B9 /* NOTICE.txt */,
 				1F3A47511953E84700293259 /* help.md */,
 				1F59491A1AB57C78007394CB /* syntax_highlighting.json */,
 				1F3FC8A91C85AE9F000965E1 /* MacDown.sdef */,
@@ -934,6 +946,8 @@
 				1F0D9D81194AC83C008E1856 /* MainMenu.xib */,
 				1F9A14EA194EEE9900D1C6A9 /* MPMainController.h */,
 				1F9A14EB194EEE9900D1C6A9 /* MPMainController.m */,
+				DA00000000000000000000B2 /* MPWelcomeController.h */,
+				DA00000000000000000000B3 /* MPWelcomeController.m */,
 				1F9A14E8194EEE9900D1C6A9 /* MPExportPanelAccessoryViewController.h */,
 				1F9A14E9194EEE9900D1C6A9 /* MPExportPanelAccessoryViewController.m */,
 				1FB3C0221E5061A2002AEB6A /* MPExportPanelAccessoryViewController.xib */,
@@ -1448,6 +1462,9 @@
 				1F27896B1973BEB100EE696A /* Localizable.strings in Resources */,
 				1F0D9DAD194AC8EF008E1856 /* Images.xcassets in Resources */,
 				1F0D9DAA194AC8CB008E1856 /* Credits.rtf in Resources */,
+				DA00000000000000000000B4 /* startup-sound.wav in Resources */,
+				DA00000000000000000000B6 /* LICENSE-ACADEMY.txt in Resources */,
+				DA00000000000000000000B8 /* NOTICE.txt in Resources */,
 				1FBDFEA51962A27300BEEA70 /* MPGeneralPreferencesViewController.xib in Resources */,
 				1F0F3BFC195F75F200FC0B3B /* MathJax in Resources */,
 				1F3619E61F36DA0F00EDA15A /* MPTerminalPreferencesViewController.xib in Resources */,
@@ -1554,6 +1571,7 @@
 				1F5A37101C868EC0006E63E7 /* MPPlugIn.m in Sources */,
 				1FBDFEA11962A25A00BEEA70 /* MPGeneralPreferencesViewController.m in Sources */,
 				1F9A14ED194EEE9900D1C6A9 /* MPMainController.m in Sources */,
+				DA00000000000000000000B1 /* MPWelcomeController.m in Sources */,
 				1F002A23195B3DAE008B8D93 /* MPRenderer.m in Sources */,
 				1FBBD4CB194CA36500BB3C88 /* hoedown_html_patch.c in Sources */,
 				1F8A8364195346B200B6BF69 /* pmh_styleparser.c in Sources */,
@@ -2161,6 +2179,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MacDown/Code/MacDown-Prefix.pch";
 				INFOPLIST_FILE = "MacDown/MacDown-Info.plist";
+				CURRENT_PROJECT_VERSION = 1;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.detroitautomationacademy.macdown-debug";
 				PRODUCT_NAME = MacDown;
@@ -2210,6 +2229,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MacDown/Code/MacDown-Prefix.pch";
 				INFOPLIST_FILE = "MacDown/MacDown-Info.plist";
+				CURRENT_PROJECT_VERSION = 1;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.detroitautomationacademy.macdown";
 				PRODUCT_NAME = MacDown;

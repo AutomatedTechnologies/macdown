@@ -20,6 +20,7 @@
 #import "MPHtmlPreferencesViewController.h"
 #import "MPTerminalPreferencesViewController.h"
 #import "MPDocument.h"
+#import "MPWelcomeController.h"
 
 
 static NSString * const kMPTreatLastSeenStampKey = @"treatLastSeenStamp";
@@ -93,6 +94,7 @@ NS_INLINE void treat()
 
 @interface MPMainController ()
 @property (readonly) NSWindowController *preferencesWindowController;
+@property (nonatomic, strong) MPWelcomeController *welcomeController;
 @end
 
 
@@ -121,6 +123,13 @@ NS_INLINE void treat()
         setEventHandler:self
             andSelector:@selector(openUrlSchemeAppleEvent:withReplyEvent:)
           forEventClass:kInternetEventClass andEventID:kAEGetURL];
+
+    // SDS-8 welcome screen (SDS-10 conformance build, 2026-11-10):
+    // presented at launch — animated AppIcon mark, runtime-read
+    // version line, standard startup sound. Non-modal and
+    // user-dismissed; it never blocks document opening.
+    self.welcomeController = [[MPWelcomeController alloc] init];
+    [self.welcomeController showWindow:nil];
 }
 
 // Open a file from a browser with url of the form :
